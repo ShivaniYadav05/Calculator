@@ -1,0 +1,44 @@
+<html>
+<head>
+<script type="text/javascript">
+function calculate(meth)
+{
+var a=Number(document.cal.num1.value);
+var b=Number(document.cal.num2.value);
+switch (meth){
+case "add":
+var c=a+b;
+break;
+case "sub":
+var c=a-b;
+break;
+case "mul":
+var c=a*b;
+break;
+case "div":
+var c=a/b;
+break;
+}
+document.cal.res.value=c;
+
+}
+
+</script>
+</head>
+
+<body>
+<form name="cal">
+Enter 1st num:<input type="text" name="num1" /> <br/><br>
+Enter 2nd num:<input type-="text" name="num2" /> <br/><br>
+Select operation:
+<select name="-please select-" onchange="calculate(this.value)">
+<option >-please select-</option>
+<option value="add">addition</option>
+<option value="sub">subtraction</option>
+<option value="mul">multiplication</option>
+<option value="div">division</option>
+</select>
+
+Result= <input type="text" name="res" />
+</form>
+</body>
