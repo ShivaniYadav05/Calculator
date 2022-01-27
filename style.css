@@ -1,0 +1,20 @@
+.container {
+    font-family: arial;
+    font-size: 24px;
+    margin: 25px;
+    width: 600px;
+    height: 300px;
+    outline: dashed 1px black;
+    background-color: lightgray;
+  }
+  
+  p {
+    /* Center horizontally*/
+    text-align: center;
+  }
+  .operationButtons{
+      background-color: darksalmon;
+  }
+  .oprationContainer{
+      margin-left: 40px;
+  }
