@@ -1,44 +1,47 @@
 <html>
 <head>
+<link rel="stylesheet" href="style.css"></link>
 <script type="text/javascript">
 function calculate(meth)
 {
-var a=Number(document.cal.num1.value);
-var b=Number(document.cal.num2.value);
+var number1 = +document.getElementById('number1').value;
+var number2 = +document.getElementById('number2').value;
+var result;
 switch (meth){
 case "add":
-var c=a+b;
+result=number1+number2;
 break;
 case "sub":
-var c=a-b;
+result=number1-number2;
 break;
 case "mul":
-var c=a*b;
+result=number1*number2;;
 break;
 case "div":
-var c=a/b;
+result=number1/number2;;
 break;
 }
-document.cal.res.value=c;
+document.getElementById('result').value=result;
 
 }
-
 </script>
 </head>
 
 <body>
-<form name="cal">
-Enter 1st num:<input type="text" name="num1" /> <br/><br>
-Enter 2nd num:<input type-="text" name="num2" /> <br/><br>
-Select operation:
-<select name="-please select-" onchange="calculate(this.value)">
-<option >-please select-</option>
-<option value="add">addition</option>
-<option value="sub">subtraction</option>
-<option value="mul">multiplication</option>
-<option value="div">division</option>
-</select>
+    <div class="container">
+A=:<input type="number"  id="number1" /> <br/><br>
+B=:<input type="number" id="number2"  /> <br/><br>
+<div class="oprationContainer">
+    <button class="operationButtons" onclick="calculate('add')">+</button>
+    <button class="operationButtons" onclick="calculate('sub')">-</button>
+    <button class="operationButtons" onclick="calculate('mul')">*</button>
+    <button class="operationButtons" onclick="calculate('div')">/</button>
+</div>
+<br>
+<div>
+    Result: <br> <input type="text" disabled  id="result" />
+</div>
 
-Result= <input type="text" name="res" />
-</form>
+</div>
+
 </body>
